@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="header">
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle">&#9776;</label> <!-- Here is the burger menu icon -->
+        <i class="fa fa-spinner fa-spin fa-2x"></i>
+      <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <div class="animated-line"></div><br>
+<main style="padding-top: 50px; ">
+    <img class="main-image" src="767.jpg" alt="Car Photo" oncontextmenu="event.preventDefault();">
+
+    <figcaption>
+        <h1 class="animated-underline" style="color: rgb(174, 174, 181); display: inline;">ProseBot</h1>
+        <span style="font-size: 4.2em; color: brown; vertical-align: bottom;">.</span>
+    </figcaption>
+</main><br>
+<br><div class="bordered-icon-container" style="display: flex; justify-content: center; margin-top: 50px;">
+    <a href="chat.html" class="bordered-icon">
+        <i class="fa fa-commenting-o" style="font-size:24px;color:rgb(17, 33, 171)"></i> Chat
+    </a>
+    <a href="learn.html" class="bordered-icon">
+        <i class="fa fa-book" style="font-size:24px;color:rgb(16, 28, 136)"></i> Learn
+    </a>
+    <a href="create.html" class="bordered-icon">
+        <i class="fa fa-pencil-square-o" style="font-size:24px;color:rgb(16, 28, 136)"></i> Create
+    </a>
+</div>
+
+<div style="display: flex; justify-content: center; margin-top: 10px;">
+    <svg width="200" height="400">
+        <path id="animatedPath" d="M10 80 Q 100 10 190 80" stroke="black" fill="transparent" stroke-width="3" />
+    </svg>
+    <div style="position: absolute; top: 97%; left: 110px; display: flex; align-items: center;">
+        <i class="fa fa-paste" style="font-size:24px;color:rgb(17, 33, 171)"></i>
+        <span style="margin-left: 5px;">Tasks</span>
+    </div>
+    <div style="position: absolute; top: 97%; right: 110px; display: flex; align-items: center;">
+        <i class="fa fa-rss" style="font-size:24px;color:rgb(17, 33, 171)"></i>
+        <span style="margin-left: 10px;">Blogs</span>
+    </div>
+    
+</div>
+<div style="display: flex; justify-content: center;">
+    <div style="width: 200px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 5px; padding: 10px; position: absolute; top: 107%; right: 250px; display: flex;">
+        <span><u style="color:rgb(23, 34, 131)">ProseBot<span style="font-weight: bold; color: red;">.</span></u> can help with tasks.</span>
+    </div>
+    <div style="width: 200px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 5px; padding: 10px; position: absolute; top: 107%; left: 250px; display: flex;">
+        <span><u style="color:rgb(23, 34, 131)">ProseBot<span style="font-weight: bold; color: red;">.</span></u> can help to generate blog posts.</span>
+    </div>
+    <div style="width: 200px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 5px; padding: 10px; position: absolute; top: 118%; left: 250px; margin-top: 20px; display: flex;">
+        <span><u style="color:rgb(23, 34, 131)">ProseBot<span style="font-weight: bold; color: red;">.</span></u> can help to enhance writing.</span>
+    </div>
+    <div style="width: 200px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 5px; padding: 10px; position: absolute; top: 118%; right: 250px; margin-top: 20px; display: flex;">
+        <span><u style="color:rgb(23, 34, 131)">ProseBot<span style="font-weight: bold; color: red;">.</span></u> can help to paraphrase texts.</span>
+    </div>
+</div>
+
+<style>
+    @keyframes compress {
+        0% { d: path('M10 80 Q 100 10 190 80'); }
+        50% { d: path('M10 80 Q 100 50 190 80'); }
+        100% { d: path('M10 80 Q 100 10 190 80'); }
+    }
+
+    #animatedPath {
+        animation: compress 3s infinite;
+    }
+</style>
+
+<div class="slide-up-container" style="background-color: #f5f5f5; padding: 10px; border-radius: 10px; height: 200px; width: 93%; margin: 0 auto;">
+    <div>
+        <h1 align="center"><u>I AM A Chatbot</u></h1>
+        <br>
+        <p align="center">"I can help with all of your Tasks!!"</p>
+        <p align="center">"including Marketing Writing Tasks,"</p>
+        <p align="center">"Everything on this site is content specified"</p><br>
+        <p></p>
+    </div><br>
+</div>
+
+<style>
+.slide-up-container {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 10px;
+    height: 200px;
+    width: 93%;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.slide-up-animation {
+    animation: slideUpAnimation 0.5s ease-in-out forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes slideUpAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+</style>
+
+
+<script>
+
+// Select the target element
+const slideUpContainer = document.querySelector('.slide-up-container');
+
+// Create a new Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Add the slide-up-animation class when the container is in the viewport
+      slideUpContainer.classList.add('slide-up-animation');
+    } else {
+      // Remove the slide-up-animation class when the container is out of the viewport
+      slideUpContainer.classList.remove('slide-up-animation');
+    }
+  });
+});
+
+// Observe the target element
+observer.observe(slideUpContainer);
+
+
+
+// Get the div element
+const div = document.querySelector('.your-div-class');
+
+// Function to adjust size and position
+function adjustLayout() {
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+
+    // Adjust size and position based on viewport size
+    const newWidth = viewportWidth * 0.3;  // Adjust this as needed
+    const newHeight = viewportHeight * 0.2;  // Adjust this as needed
+    const newTop = viewportHeight * 0.1;  // Adjust this as needed
+    const newLeft = viewportWidth * 0.1;  // Adjust this as needed
+
+    // Apply new size and position to div
+    div.style.width = `${newWidth}px`;
+    div.style.height = `${newHeight}px`;
+    div.style.top = `${newTop}px`;
+    div.style.left = `${newLeft}px`;
+}
+
+// Run the function once to set the initial size and position
+adjustLayout();
+
+// Run the function whenever the window is resized
+window.addEventListener('resize', adjustLayout);
+
+
+
+
+
+
+
+
+</script>
+
+
+<br>
+<div>
+    <br>
+    <ul><li>Marketing</li></ul>
+
+    
+</div>
+</body>
+
+
+</html>
+
+

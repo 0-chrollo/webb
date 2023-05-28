@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="chat.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>function autoResize(element) {
+        element.style.height = "auto";
+        element.style.height = (element.scrollHeight)+"px";
+    }
+    </script>
+</head>
+<body>
+
+    <header class="header">
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle">&#9776;</label> <!-- Here is the burger menu icon -->
+        <i class="fa fa-spinner fa-spin fa-2x"></i>
+      <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <div class="animated-line"></div><br>
+
+
+    <br>
+<div class="container">
+    <div class="chat-container">
+        <div class="chat-box">
+            <div class="chat-message bot-message">
+                <div class="avatar">
+                    <!-- Add chatbot avatar icon here -->
+                    <i class="fa fa-user-circle" style="font-size: 26px; margin-right: 10px;"></i>
+                </div>
+                <div class="message-content">
+                    <p>Chatbot message goes here</p>
+                </div>
+            </div>
+            <div class="chat-message user-message">
+                <div class="message-content">
+                    <p>User message goes here</p>
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <textarea id="chatInput" placeholder="Type your message here..." oninput="autoResize(this)"></textarea>
+            <button><i class="fa fa-paper-plane" style="font-size: 24px;"></i></button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
