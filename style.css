@@ -75,9 +75,9 @@ body {
     border-radius: 10%;
     box-shadow: 2px 2px 6px grey;
 }
-@media (max-width: 468px) {
+@media (max-width: 678px) {
     .header {
-        padding: 1vw;
+        padding: 4vw;
     }
 
     .menu-toggle + label {
@@ -104,12 +104,6 @@ body {
     object-fit: cover; /* Cover the entire area */
 }
 
-@media (max-width: 468px) {
-    .main-image {
-        height: 100vh; /* Adjust size for smaller screens if needed */
-        filter: brightness(42%);
-    }
-}
 
 figcaption {
     position:absolute;
