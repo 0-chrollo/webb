@@ -1,12 +1,14 @@
 body {
-    margin: 100;
+    margin: 0; 
+    padding: 0;
     font-family: Arial, sans-serif;
-    width: 100%; 
+    width: 100%;
+    overflow-x: hidden;  /* This prevents horizontal scrolling */
 }
 
 .animated-line {
     position: absolute;
-    top: 7vh; /* Adjust to fit your needs */
+    top: 7vh;
     left: 0;
     height: 0.5vh;
     width: 100%;
@@ -28,17 +30,12 @@ body {
 
 /* Media Query for screens up to 600px */
 @media (max-width: 600px) {
-
-    body {
-        margin: 0; /* change margin to 0 on smaller screens for full width */
-        padding: 0; /* Remove padding, to allow elements take full width */
-    }
-
     .animated-line {
-        top: 10vh; /* Increase top space for smaller screens */
-        height: 0.3vh; /* Reduce the height a bit for smaller screens */
+        top: 10vh; 
+        height: 0.3vh;
     }
 }
+
 
 /* First Media Query-------------------------------- */
 
