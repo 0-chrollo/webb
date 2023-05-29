@@ -1,9 +1,13 @@
 body {
-    margin: 0; 
-    padding: 0;
+    margin: 20px;
     font-family: Arial, sans-serif;
-    width: 100%;
-    overflow-x: hidden;  /* This prevents horizontal scrolling */
+    width: 100%; 
+}
+
+@media (min-width: 600px) {
+    body {
+        margin: 100px;
+    }
 }
 
 .animated-line {
@@ -58,7 +62,7 @@ body {
 
 .header nav {
     display: flex;
-    flex-direction: column; /* Changed from row to column */
+    position: fixed;
     background-color: #ffffff;
     height: calc(100% - 7vh);
     top: 7vh;
@@ -68,27 +72,6 @@ body {
     box-sizing: border-box;
     transition: 0.5s;
 }
-
-@media (max-width: 600px) {
-    .header {
-        flex-direction: column; /* stack the elements vertically */
-        height: auto;
-    }
-
-    .header nav {
-        position: relative;
-        left: 0; /* To avoid the nav being off-screen */
-    }
-
-    .menu-toggle + label {
-        display: block;
-    }
-
-    .menu-toggle:checked ~ nav {
-        display: none; /* To hide the navigation when not in use */
-    }
-}
-
 
 .header nav a {
     color: #333;
