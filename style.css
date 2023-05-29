@@ -190,7 +190,7 @@ img {
 .bordered-icon:nth-child(3) { animation: float 1.5s ease-in-out infinite; }
 
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
 
     body {
         margin: 3px;
