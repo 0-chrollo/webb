@@ -75,37 +75,103 @@
 </div>
 
 
-<div style="display: flex; justify-content: center; margin-top: 10px;">
-    <svg width="200" height="400">
-        <path id="animatedPath" d="M10 80 Q 100 10 190 80" stroke="black" fill="transparent" stroke-width="3" />
-    </svg>
-    <div style="position: absolute; top: 97%; left: 110px; display: flex; align-items: center;">
-        <i class="fa fa-paste" style="font-size:24px;color:rgb(17, 33, 171)"></i>
-        <span style="margin-left: 5px;">Tasks</span>
-    </div>
-    <div style="position: absolute; top: 97%; right: 110px; display: flex; align-items: center;">
-        <i class="fa fa-rss" style="font-size:24px;color:rgb(17, 33, 171)"></i>
-        <span style="margin-left: 10px;">Blogs</span>
+
+
+
+<style>
+    .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .icon-container {
+        position: absolute;
+        bottom: 50px; /* Adjust this value based on your needs */
+        display: flex;
+        align-items: center;
+    }
+    
+    .icon-left {
+        left: 13%; /* Adjust this value based on your needs */
+    }
+    
+    .icon-right {
+        right: 13%; /* Adjust this value based on your needs */
+    }
+    
+    .icon {
+        font-size: 7vw; /* Adjust this value based on your needs */
+    }
+    
+    .path {
+        width: 50%;
+        height: 10%;
+    }
+    </style>
+    
+    <div class="container">
+        <svg class="path" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
+            <path id="animatedPath" d="M10 80 Q 100 10 190 80" stroke="black" fill="transparent" stroke-width="2" />
+        </svg>
+        <div class="icon-container icon-left">
+            <i class="fa fa-paste icon" style="color:rgb(17, 33, 171)"></i>
+            <span style="margin-left: 5px;">Tasks</span>
+        </div>
+        <div class="icon-container icon-right">
+            <i class="fa fa-rss icon" style="color:rgb(17, 33, 171)"></i>
+            <span style="margin-left: 10px;">Blogs</span>
+        </div>
     </div>
     
 
 
 
-</div>
-<div style="display: flex; justify-content: center;">
-    <div style="width: 200px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 5px; padding: 10px; position: absolute; top: 107%; right: 250px; display: flex;">
-        <span><u style="color:rgb(23, 34, 131)">ProseBot<span style="font-weight: bold; color: red;">.</span></u> can help with tasks.</span>
+
+
+
+
+
+
+<!--Below Are Bordred Boxes That have ProseBot Content and Are Well aligned 2x2 Grid-->
+
+<style>
+    .content-boxes {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .content-box {
+        border-radius:15px;
+        width: 45%;
+        margin: 2.5%;
+        padding: 20px; /* Padding for space inside the box */
+        box-sizing: border-box;
+        border: 1px solid #fcfafa; /* Change border color based on your needs */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); /* Shadow effect */
+        text-align: center; /* Center align text */
+    }
+    </style>
+    
+    <div class="content-boxes">
+        <div class="content-box">
+            <span><u style="color:rgb(23, 34, 131)">ProseBot<span style="font-weight: bold; color: red;">.</span></u> can help with tasks.</span>
+        </div>
+        <div class="content-box">
+            <span><u style="color:rgb(23, 34, 131)">ProseBot<span style="font-weight: bold; color: red;">.</span></u> can help to generate blog posts.</span>
+        </div>
+        <div class="content-box">
+            <span><u style="color:rgb(23, 34, 131)">ProseBot<span style="font-weight: bold; color: red;">.</span></u> can help to enhance writing.</span>
+        </div>
+        <div class="content-box">
+            <span><u style="color:rgb(23, 34, 131)">ProseBot<span style="font-weight: bold; color: red;">.</span></u> can help to paraphrase texts.</span>
+        </div>
     </div>
-    <div style="width: 200px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 5px; padding: 10px; position: absolute; top: 107%; left: 250px; display: flex;">
-        <span><u style="color:rgb(23, 34, 131)">ProseBot<span style="font-weight: bold; color: red;">.</span></u> can help to generate blog posts.</span>
-    </div>
-    <div style="width: 200px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 5px; padding: 10px; position: absolute; top: 118%; left: 250px; margin-top: 20px; display: flex;">
-        <span><u style="color:rgb(23, 34, 131)">ProseBot<span style="font-weight: bold; color: red;">.</span></u> can help to enhance writing.</span>
-    </div>
-    <div style="width: 200px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 5px; padding: 10px; position: absolute; top: 118%; right: 250px; margin-top: 20px; display: flex;">
-        <span><u style="color:rgb(23, 34, 131)">ProseBot<span style="font-weight: bold; color: red;">.</span></u> can help to paraphrase texts.</span>
-    </div>
-</div>
+    
+
 
 
    </section>
@@ -145,11 +211,12 @@
     padding: 10px;
     border-radius: 10px;
     height: 200px;
-    width: 93%;
     margin: 0 auto;
     opacity: 0;
     transform: translateY(50px);
+    width: 93%;
 }
+
 
 .slide-up-animation {
     animation: slideUpAnimation 0.5s ease-in-out forwards;
@@ -194,35 +261,6 @@ observer.observe(slideUpContainer);
 
 
 
-// Get the div element
-const div = document.querySelector('.your-div-class');
-
-// Function to adjust size and position
-function adjustLayout() {
-    const viewportWidth = window.innerWidth;
-    const viewportHeight = window.innerHeight;
-
-    // Adjust size and position based on viewport size
-    const newWidth = viewportWidth * 0.3;  // Adjust this as needed
-    const newHeight = viewportHeight * 0.2;  // Adjust this as needed
-    const newTop = viewportHeight * 0.1;  // Adjust this as needed
-    const newLeft = viewportWidth * 0.1;  // Adjust this as needed
-
-    // Apply new size and position to div
-    div.style.width = `${newWidth}px`;
-    div.style.height = `${newHeight}px`;
-    div.style.top = `${newTop}px`;
-    div.style.left = `${newLeft}px`;
-}
-
-// Run the function once to set the initial size and position
-adjustLayout();
-
-// Run the function whenever the window is resized
-window.addEventListener('resize', adjustLayout);
-
-
-
 
 
 
@@ -242,5 +280,4 @@ window.addEventListener('resize', adjustLayout);
 
 
 </html>
-
 
