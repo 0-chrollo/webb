@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" type="text/css" href="style.css">
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -21,25 +22,58 @@
         </nav>
     </header>
     <div class="animated-line"></div><br>
-<main style="padding-top: 50px; ">
-    <img class="main-image" src="767.jpg" alt="Car Photo" oncontextmenu="event.preventDefault();">
+<main style="padding-top: 45px; ">
+    <img class="main-image" src="767.jpg" alt="ProseBot" oncontextmenu="event.preventDefault();">
 
     <figcaption>
         <h1 class="animated-underline" style="color: rgb(174, 174, 181); display: inline;">ProseBot</h1>
         <span style="font-size: 4.2em; color: brown; vertical-align: bottom;">.</span>
     </figcaption>
+
 </main><br>
-<br><div class="bordered-icon-container" style="display: flex; justify-content: center; margin-top: 50px;">
+
+<div class="content-animation"></div>
+<style>
+
+    
+.content-animation {
+    position: relative;
+    top: 1vh; /* Adjust to fit your needs */
+    left: 0;
+    height: 0.5vh;
+    width: 100%;
+    background-color: darkblue;
+    border-radius: 5px;
+    
+    animation: compress-decompress 2s linear infinite;
+    box-shadow: 10px 14px 14px grey;
+}
+
+@keyframes compress-decompress {
+    0%, 100% {
+        width: 10%;
+    }
+    50% {
+        width: 100%;
+    }
+}
+</style>
+   <section><br>
+<div  style="display: flex; justify-content: center; margin-top: 20px;">
     <a href="chat.html" class="bordered-icon">
-        <i class="fa fa-commenting-o" style="font-size:24px;color:rgb(17, 33, 171)"></i> Chat
+        <i class="fa fa-commenting-o" style="font-size:27px;color:rgb(17, 33, 171)"></i> Chat
     </a>
     <a href="learn.html" class="bordered-icon">
-        <i class="fa fa-book" style="font-size:24px;color:rgb(16, 28, 136)"></i> Learn
+        <i class="fa fa-book" style="font-size:27px;color:rgb(16, 28, 136)"></i> Learn
     </a>
     <a href="create.html" class="bordered-icon">
-        <i class="fa fa-pencil-square-o" style="font-size:24px;color:rgb(16, 28, 136)"></i> Create
+        <i class="fa fa-pencil-square-o" style="font-size:27px;color:rgb(16, 28, 136)"></i> Create
     </a>
 </div>
+
+
+</div>
+
 
 <div style="display: flex; justify-content: center; margin-top: 10px;">
     <svg width="200" height="400">
@@ -54,6 +88,9 @@
         <span style="margin-left: 10px;">Blogs</span>
     </div>
     
+
+
+
 </div>
 <div style="display: flex; justify-content: center;">
     <div style="width: 200px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 5px; padding: 10px; position: absolute; top: 107%; right: 250px; display: flex;">
@@ -70,7 +107,16 @@
     </div>
 </div>
 
+
+   </section>
 <style>
+
+
+/*--Section Animation-->*/
+
+
+
+
     @keyframes compress {
         0% { d: path('M10 80 Q 100 10 190 80'); }
         50% { d: path('M10 80 Q 100 50 190 80'); }

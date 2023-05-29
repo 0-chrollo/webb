@@ -75,10 +75,9 @@ body {
     border-radius: 10%;
     box-shadow: 2px 2px 6px grey;
 }
-
 @media (max-width: 768px) {
     .header {
-        padding: 0 4vw;
+        padding: 1vw;
     }
 
     .menu-toggle + label {
@@ -88,47 +87,26 @@ body {
     .menu-toggle:checked ~ nav {
         left: 0;
     }
-}
 
-@media (min-width: 769px) {
-    .header nav {
-        position: relative;
-        height: auto;
-        top: auto;
-        left: auto;
-        background-color: transparent;
-        padding: 0;
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .header nav a {
-        margin-bottom: 0;
-        background-color: #ffffff;
-        color: #000;
-        padding: 2vh 3vw;
-        border: 1px solid #000;
-        border-radius: 50px;
-        transition: color 0.3s, background-color 0.3s;
-    }
-
-    .header nav a:hover {
-        background-color: #000;
-        color: #fff;
+    .fa-spinner {
+        font-size: 4vw;
     }
 }
+
 .main-image {
     display: block;
     margin-left: auto;
     margin-right: auto;
     border-radius: 3%;
-    width: 99%;
+    width:100%;
     filter: brightness(50%);
+    height: 60vh; /* Set a specific height */
+    object-fit: cover; /* Cover the entire area */
 }
 
 @media (max-width: 768px) {
     .main-image {
-        width: 99%; /* Adjust size for smaller screens if needed */
+        height: 50vh; /* Adjust size for smaller screens if needed */
         filter: brightness(42%);
     }
 }
@@ -155,7 +133,7 @@ figcaption {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #e8e4e4;
+    background-color: #d4d0d0;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
     animation: underline 2s infinite;
@@ -181,7 +159,7 @@ figcaption {
 }
 
 img {
-    box-shadow: 2px 14px 17px grey;
+    box-shadow: 0px 25px 35px grey;
 }
 .bordered-icon-container {
     display: flex;
@@ -190,19 +168,20 @@ img {
     justify-content: center;
     overflow-x: auto;
 }
-
 .bordered-icon {
     margin: 1vw;
-    padding: 6vw;
+    padding: 5vw;  /* Reduce the padding a bit */
     flex: 0 0 auto;
-    border-radius: 50%;
+    border-radius: 48%;
     background-color: #fff;
     text-align: center;
     text-decoration: none;
     color: inherit;
     transition: transform .2s;
     box-shadow: 2px 2px 6px grey;
+    border: 4px solid #fff;; /* Reduced border size */
 }
+
 
 
 
