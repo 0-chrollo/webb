@@ -1,18 +1,12 @@
 body {
-    margin: 20px;
+    margin: 3px;
     font-family: Arial, sans-serif;
     width: 100%; 
 }
 
-@media (min-width: 600px) {
-    body {
-        margin: 100px;
-    }
-}
-
 .animated-line {
     position: absolute;
-    top: 7vh;
+    top: 7vh; /* Adjust to fit your needs */
     left: 0;
     height: 0.5vh;
     width: 100%;
@@ -31,19 +25,6 @@ body {
         width: 100%;
     }
 }
-
-/* Media Query for screens up to 600px */
-@media (max-width: 600px) {
-    .animated-line {
-        top: 10vh; 
-        height: 0.3vh;
-    }
-}
-
-
-/* First Media Query-------------------------------- */
-
-
 
 .header {
     background-color: #ffffff;
@@ -170,6 +151,9 @@ figcaption {
     }
 }
 
+img {
+    box-shadow: 0px 25px 35px grey;
+}
 .bordered-icon-container {
     display: flex;
     flex-direction: row;
@@ -204,3 +188,33 @@ figcaption {
 .bordered-icon:nth-child(1) { animation: float 1.2s ease-in-out infinite; }
 .bordered-icon:nth-child(2) { animation: float 1.4s ease-in-out infinite; }
 .bordered-icon:nth-child(3) { animation: float 1.5s ease-in-out infinite; }
+
+
+@media screen and (max-width: 600px) {
+
+    body {
+        margin: 3px;
+        font-family: Arial, sans-serif;
+        width: 100%; 
+    }
+    
+    /* Adjust header layout */
+ 
+
+    /* Adjust main layout */
+    main {
+        padding-top: 10px;
+    }
+
+    /* Adjust section layout */
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Adjust div size */
+    div {
+        width: 95%;  /* slightly less than 100% to account for padding and borders */
+        box-sizing: border-box;  /* so padding and borders are included in the width */
+    }
+}
