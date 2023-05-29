@@ -270,12 +270,80 @@ observer.observe(slideUpContainer);
 
 
 
-
-
-
-
-
 </script>
+
+
+<section class="possible" style="margin:40px">
+    <p><i class="fa fa-check-square-o" style="font-size:24px"></i> Proofreading</p>
+    <p><i class="fa fa-check-square-o" style="font-size:24px"></i> Market Research</p>
+    <p><i class="fa fa-check-square-o" style="font-size:24px"></i> Compose Emails</p>
+    <p><i class="fa fa-check-square-o" style="font-size:24px"></i> Cover Letters</p>
+    <p><i class="fa fa-check-square-o" style="font-size:24px"></i> School Assignments</p>
+    <p><i class="fa fa-check-square-o" style="font-size:24px"></i> Social Media Posts</p>
+    <p><i class="fa fa-check-square-o" style="font-size:24px"></i> Blog Writing</p>
+    <p><i class="fa fa-check-square-o" style="font-size:24px"></i> Resume Creation</p>
+</section>
+<style>
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.possible {
+  overflow: hidden; 
+}
+
+.possible p {
+  transform: translateX(50%);
+  opacity: 0;
+  animation: slideInFromRight 1s forwards;
+  animation-play-state: paused;
+}
+
+.possible p:nth-child(1) { animation-delay: 0.2s; }
+.possible p:nth-child(2) { animation-delay: 0.4s; }
+.possible p:nth-child(3) { animation-delay: 0.6s; }
+.possible p:nth-child(4) { animation-delay: 0.8s; }
+.possible p:nth-child(5) { animation-delay: 1.0s; }
+.possible p:nth-child(6) { animation-delay: 1.2s; }
+.possible p:nth-child(7) { animation-delay: 1.4s; }
+.possible p:nth-child(8) { animation-delay: 1.6s; }
+</style>
+
+<div>
+
+    <script>
+        // Select the target elements
+        const items = document.querySelectorAll('.possible p');
+        
+        // Create a new Intersection Observer
+        const obbserver = new IntersectionObserver((entries, obbserver) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // Resume the animation
+              entry.target.style.animationPlayState = 'running';
+            } else {
+              // Reset and pause the animation
+              entry.target.style.animation = 'none';
+              entry.target.offsetHeight; /* trigger reflow */
+              entry.target.style.animation = null;
+              entry.target.style.animationPlayState = 'paused';
+            }
+          });
+        }, {threshold: 0.1}); // adjust the threshold according to when you want the animation to start
+        
+        items.forEach(item => {
+            obbserver.observe(item);
+        });
+        </script>
+        
+</div>
 
 
 </body>
