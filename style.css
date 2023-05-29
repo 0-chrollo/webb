@@ -191,6 +191,11 @@ img {
 
 @media (min-width: 678px) {
     /* Styles for screens wider than 678px */
+    body {
+        margin: 100;
+        font-family: Arial, sans-serif;
+        width: 100%; 
+    }
 
     .header nav {
         flex-direction: row;  /* Makes the nav links horizontal for wider screens */
