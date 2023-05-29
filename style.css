@@ -1,29 +1,7 @@
 body {
-    margin: 100;
+    margin: 0; 
     font-family: Arial, sans-serif;
-    width: 100%; 
-}
-
-.animated-line {
-    position: absolute;
-    top: 7vh; /* Adjust to fit your needs */
-    left: 0;
-    height: 0.5vh;
     width: 100%;
-    background-color: darkblue;
-    border-radius: 5px;
-    
-    animation: compress-decompress 2s linear infinite;
-    box-shadow: 10px 14px 14px grey;
-}
-
-@keyframes compress-decompress {
-    0%, 100% {
-        width: 10%;
-    }
-    50% {
-        width: 100%;
-    }
 }
 
 .header {
@@ -76,21 +54,21 @@ body {
     box-shadow: 2px 2px 6px grey;
 }
 
-    .header {
-        padding: 4vw;
-    }
+.header {
+    padding: 4vw;
+}
 
-    .menu-toggle + label {
-        display: block;
-    }
+.menu-toggle + label {
+    display: block;
+}
 
-    .menu-toggle:checked ~ nav {
-        left: 0;
-    }
+.menu-toggle:checked ~ nav {
+    left: 0;
+}
 
-    .fa-spinner {
-        font-size: 4vw;
-    }
+.fa-spinner {
+    font-size: 4vw;
+}
 
 .main-image {
     display: block;
@@ -99,10 +77,9 @@ body {
     border-radius: 3%;
     width:100%;
     filter: brightness(50%);
-    height: 60vh; /* Set a specific height */
-    object-fit: cover; /* Cover the entire area */
+    height: auto; 
+    object-fit: cover;
 }
-
 
 figcaption {
     position:absolute;
@@ -132,52 +109,15 @@ figcaption {
     animation: underline 2s infinite;
 }
 
-@keyframes underline {
-    0% {
-        transform: scaleX(0);
-        transform-origin: bottom left;
-    }
-    50% {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-    }
-    50.01%, 100% {
-        transform: scaleX(1);
-        transform-origin: bottom right;
-    }
-    100% {
-        transform: scaleX(0);
-        transform-origin: bottom right;
-    }
-}
-
-img {
-    box-shadow: 0px 25px 35px grey;
-}
-.bordered-icon-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    overflow-x: auto;
-}
 .bordered-icon {
     margin: 1vw;
-    padding: 5vw;  /* Reduce the padding a bit */
+    padding: 2vw;  
     flex: 0 0 auto;
     border-radius: 48%;
     background-color: #fff;
     text-align: center;
     text-decoration: none;
-    color: inherit;
-    transition: transform .2s;
-    box-shadow: 2px 2px 6px grey;
-    border: 4px solid #fff;; /* Reduced border size */
 }
-
-
-
-
 
 @keyframes float {
     0% { transform: translateY(0px); }
@@ -188,40 +128,3 @@ img {
 .bordered-icon:nth-child(1) { animation: float 1.2s ease-in-out infinite; }
 .bordered-icon:nth-child(2) { animation: float 1.4s ease-in-out infinite; }
 .bordered-icon:nth-child(3) { animation: float 1.5s ease-in-out infinite; }
-
-@media (min-width: 678px) {
-    /* Styles for screens wider than 678px */
-    body {
-        margin: 100;
-        font-family: Arial, sans-serif;
-        width: 100%; 
-    }
-
-    .header nav {
-        flex-direction: row;  /* Makes the nav links horizontal for wider screens */
-        padding: 0;
-    }
-
-    .header nav a {
-        margin: 0 1vw;  /* Changed to horizontal margin for wider screens */
-    }
-
-    .menu-toggle + label {
-        display: none;  /* Hides the menu toggle on wider screens */
-    }
-
-    .header {
-        padding: 0 5vw;  /* More padding for wider screens */
-    }
-
-    .main-image {
-        height: 60vh;  /* Adjust the height of the image for wider screens */
-    }
-
-    .figcaption {
-        position: relative;
-        top: initial;
-        left: initial;
-        transform: initial;
-    }
-}
