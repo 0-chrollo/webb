@@ -346,8 +346,111 @@ observer.observe(slideUpContainer);
 </div>
 
 
-</body>
+<div class="what-is">
+    <h1>What is ProseBot?</h1>
+    <p>ProseBot is a state-of-the-art chatbot, designed to streamline your tasks, making your life more effortless and efficient.</p>
+</div>
+
+<div class="what-is">
+    <h1>Who is ProseBot for?</h1>
+    <p>ProseBot is for everyone! Whether you're a student, professional, or just someone looking to boost productivity, ProseBot is here to help.</p>
+</div>
+
+<div class="what-is">
+    <h1>Why choose ProseBot?</h1>
+    <p>With its advanced AI capabilities, ProseBot can adapt to your specific needs, making it an indispensable tool in your daily life.</p>
+</div>
 
 
-</html>
+<style>
+ .what-is {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 48px; /* Adds space below each div */
+    width: 350px; /* adjust as needed */
+    height: 200px; /* adjust as needed */
+    background-color:  #f5f5f5;
+    border: 1.5px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+    color: rgb(4, 4, 119);
+}
+
+.what-is h1 {
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* add a subtle text shadow */
+    margin-bottom: 10px; /* create some space between the h1 and the p */
+}
+
+.what-is p {
+    font-size: 16px;
+    font-weight: 200; /* make the font thinner */
+    color: #333; /* make the text a bit darker for contrast */
+    text-align: center; /* center the text */
+}
+
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.what-is {
+  animation: slideInFromLeft 1.5s ease-out both;
+  /* rest of your CSS here */
+}
+
+
+
+</style>
+
+
+
+<script>
+    // Select the target elements
+    const ittems = document.querySelectorAll('.what-is');
+    
+    // Create a new Intersection Observer
+    const obsserver = new IntersectionObserver((entries, obsserver) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Resume the animation
+          entry.target.style.animationPlayState = 'running';
+        } else {
+          // Reset and pause the animation
+          entry.target.style.animation = 'none';
+          entry.target.offsetHeight; /* trigger reflow */
+          entry.target.style.animation = null;
+          entry.target.style.animationPlayState = 'paused';
+        }
+      });
+    }, {threshold: 0.1}); // adjust the threshold according to when you want the animation to start
+    
+    ittems.forEach(item => {
+        obsserver.observe(item);
+    });
+    </script>
+    
+
+
+</div>
+
+<footer style="background-color:rgb(4, 4, 119); color: white; padding: 1px; text-align: center; margin-top: 50px;">
+    <p>&copy; 2023 ProseBot. All rights reserved.</p>
+  </footer>
+  
+  </body>
+  </html>
+  
 
