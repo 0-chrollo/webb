@@ -360,54 +360,63 @@ observer.observe(slideUpContainer);
 </div>
 
 <style>
-    .what-is {
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: auto;
-      margin-bottom: 48px; /* Adds space below each div */
-      background-color: #f5f5f5;
-      border: 1.5px solid black;
-      padding: 10px;
-      box-sizing: border-box;
-      color: rgb(4, 4, 119);
-      opacity: 0; /* Initially hidden */
-      transition: opacity 0.5s; /* Add transition effect */
+   .what-is {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 48px; /* Adds space below each div */
+  background-color: #f5f5f5;
+  border: 1px solid rgb(33, 32, 32);
+  padding: 10px;
+  box-sizing: border-box;
+  color: rgb(4, 4, 119);
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s; /* Add transition effect */
+  max-width: 300px; /* Set the maximum width of the container */
+}
+
+.what-is h1 {
+  font-size: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* add a subtle text shadow */
+  margin-bottom: 15px; /* create some space between the h1 and the p */
+}
+
+.what-is p {
+  font-size: 15px;
+  font-weight: 100; /* make the font thinner */
+  color: #000000; /* make the text a bit darker for contrast */
+  text-align: center; /* center the text */
+}
+.slide-in-from-left-animation {
+    animation: slideInFromLeftAnimation 0.9s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes slideInFromLeftAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px);
     }
-    
-    .what-is h1 {
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* add a subtle text shadow */
-      margin-bottom: 10px; /* create some space between the h1 and the p */
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
-    
-    .what-is p {
-      font-weight: 200; /* make the font thinner */
-      color: #333; /* make the text a bit darker for contrast */
-      text-align: center; /* center the text */
-    }
+}
+
 </style>
 
-<script>
-    // Select the target elements
-    const ittems = document.querySelectorAll('.what-is');
 
-    // Create a new Intersection Observer
-    const bserver = new IntersectionObserver((entries, bserver) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // Fade in the div container when it is in the viewport
-          entry.target.style.opacity = '1';
-        }
-      });
-    });
 
-    // Use the observer to observe each item
-    ittems.forEach(item => {
-      bserver.observe(item);
-    });
-</script>
+
+
+
+<div></div>
+
+
+
 
 
 <footer style="background-color:rgb(4, 4, 119); color: white; padding: 1px; text-align: center; margin-top: 50px;">
@@ -418,3 +427,26 @@ observer.observe(slideUpContainer);
   </html>
   
 
+
+  <script>
+    // Select the target elements
+ const whatIsDivs = document.querySelectorAll('.what-is');
+ 
+ // Create a new Intersection Observer
+ const whatIsObserver = new IntersectionObserver((entries) => {
+   entries.forEach((entry) => {
+     if (entry.isIntersecting) {
+       // Add the slide-in-from-left-animation class when the container is in the viewport
+       entry.target.classList.add('slide-in-from-left-animation');
+     } else {
+       // Remove the slide-in-from-left-animation class when the container is out of the viewport
+       entry.target.classList.remove('slide-in-from-left-animation');
+     }
+   });
+ }, {threshold: 0.1});
+ 
+ // Observe the target elements
+ whatIsDivs.forEach(div => whatIsObserver.observe(div));
+ 
+ </script>
+ 
