@@ -1,31 +1,31 @@
+/* I have already installed openapi AI, now I want my chat UI to work in flask,the user should type and send,
+when they send, their message should be displayed as on the UI as shown and the Ai from openai, should respond on
+,this chat UI should work like that so give me the first necessary fask backend code that will work together with the code I should implement
+ on my html template to make this all work:
 
+ here is my chat.html HTML Tempate:
 
-div.content-animation,
-div > div {
-    position: relative; /* Change absolute positioning to relative */
-}
-
-div.content-animation {
-    top: 0; /* Adjust the top value to fit your needs */
-    left: 0;
-    /* Remove the height property if you don't need a fixed height */
-    height: 0;
-    width: 100%;
-    background-color: darkblue;
-    border-radius: 5px;
-    animation: compress-decompress 2s linear infinite;
-    box-shadow: 10px 14px 14px grey;
-}
-
-div > div {
-    width: 200px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    padding: 10px;
-    /* Adjust the top, left, and right values to position the elements correctly */
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    display: flex;
-}
+<div class="container">
+    <div class="chat-container">
+        <div class="chat-box">
+            <div class="chat-message bot-message">
+                <div class="avatar">
+                    <!-- Add chatbot avatar icon here -->
+                    <i class="fa fa-user-circle" style="font-size: 26px; margin-right: 10px;"></i>
+                </div>
+                <div class="message-content">
+                    <p>Chatbot message goes here</p>
+                </div>
+            </div>
+            <div class="chat-message user-message">
+                <div class="message-content">
+                    <p>User message goes here</p>
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <textarea id="chatInput" placeholder="Type your message here..." oninput="autoResize(this)"></textarea>
+            <button><i class="fa fa-paper-plane" style="font-size: 24px;"></i></button>
+        </div>
+    </div>
+</div>
